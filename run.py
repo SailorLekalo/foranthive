@@ -46,6 +46,11 @@ class Handler(BaseHTTPRequestHandler):
                     hiveymax = hive['map']['cells'][i][d]
 
         for ant in range (hive['ants']):
+            if hive['ants'][ant]['health'] < 9:
+                orders[ant] = {
+                    "act": ACTIONS['eat'],
+                    "dir": DIRECTIONS['left']
+                }
 
             if hive['ants'][ant]['event'] == 'good':
                 x = hive['ants'][ant]['x']
