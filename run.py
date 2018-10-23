@@ -47,7 +47,7 @@ class Handler(BaseHTTPRequestHandler):
 
         for ant in range (hive['ants']):
 
-            orders[0] = {
+            orders[1] = {
                 "act": ACTIONS['move'],
                 "dir": DIRECTIONS['right']
 
