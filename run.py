@@ -52,7 +52,7 @@ class Handler(BaseHTTPRequestHandler):
                     "dir": DIRECTIONS['left']
                 }
 
-            if hive['ants'][ant]['event'] == 'good':
+            if hive['ants'][ant]['event'] != 'death':
                 x = hive['ants'][ant]['x']
                 y = hive['ants'][ant]['y']
 
