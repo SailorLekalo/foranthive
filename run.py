@@ -42,13 +42,18 @@ class Handler(BaseHTTPRequestHandler):
 
         foodx=0
         foody=0
+
+        awayer = False
         for i in range (width):
             for j in range (height):
                 if map[i][j] != 0:
                     foodx = i
                     foody = j
+                    awayer = True
                     break
 
+            if awayer == True:
+                break
         if foodx-hive['ants'][1]['x'] >0:
             orders['1'] = {
                 "act": ACTIONS['move'],
